@@ -1,5 +1,14 @@
 <resources>
     <string name="app_name">Assesment1</string>
     <string name="intro">Need to convert weight easily??? From Kilograms, Grams, Quintal, Pounds, to Ounces. Try it now!!!</string>
-    <string name="gambar" translatable="false">This is a picture of a scale </string>
+    <string name="gambar">This is a picture of a scale </string>
+    <string name="kg">Kilogram(Kg)</string>
+    <string name="hg">Hektogram(Hg)</string>
+    <string name="dag">Decagram(Dag)</string>
+    <string name="gram">Gram(G)</string>
+    <string name="dg">Desigram(Dg)</string>
+    <string name="cg">Centigram(Cg)</string>
+    <string name="mg">Milligram(Mg)</string>
+    <string name="satuan_awal">Choose initial unit</string>
+    <string name="satuan_akhir">Choose final unit</string>
 </resources>
