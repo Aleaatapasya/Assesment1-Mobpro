@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Assesment1</string>
+    <string name="intro">Butuh mengonversi berat dengan mudah??? Mulai dari Kilogram, Gram, Kwintal, Pon, hingga Ons. Ayo coba sekarang!!!</string>
+    <string name="gambar">Ini gambar timbangan</string>
 </resources>

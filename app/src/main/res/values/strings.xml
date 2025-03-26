@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Assesment1</string>
+    <string name="intro">Need to convert weight easily??? From Kilograms, Grams, Quintal, Pounds, to Ounces. Try it now!!!</string>
+    <string name="gambar" translatable="false">This is a picture of a scale </string>
 </resources>
