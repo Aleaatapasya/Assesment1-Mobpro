@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Assesment1</string>
-    <string name="intro">Butuh mengonversi berat dengan mudah??? Mulai dari Kilogram, Gram, Kwintal, Pon, hingga Ons. Ayo coba sekarang!!!</string>
+    <string name="intro">Butuh mengonversi berat dengan mudah??? Mulai dari Kilogram, Hektogram, Dekagram, Gram, Desigram, Centigram, dan Miligram. Ayo coba sekarang!!!</string>
     <string name="gambar">Ini gambar timbangan</string>
     <string name="kg">Kilogram(Kg)</string>
     <string name="hg">Hektogram(Hg)</string>
@@ -14,5 +14,7 @@
     <string name="satuan_akhir">Pilih satuan akhir</string>
     <string name="input">Masukkan Berat</string>
     <string name="input_invalid">Tidak boleh kosong</string>
+    <string name="button">Hitung</string>
+    <string name="hasil">%1$.2f %2$s</string>
 
 </resources>

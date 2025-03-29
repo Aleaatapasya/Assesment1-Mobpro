@@ -5,6 +5,7 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -13,10 +14,12 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Warning
+import androidx.compose.material3.Button
 import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.ExposedDropdownMenuBox
 import androidx.compose.material3.ExposedDropdownMenuDefaults
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
@@ -27,6 +30,7 @@ import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableFloatStateOf
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -77,9 +81,9 @@ fun ScreenContent(modifier: Modifier = Modifier) {
     val expandedAkhir = remember { mutableStateOf(false) }
 
     var berat by remember { mutableStateOf("") }
-    val beratError by remember { mutableStateOf(false) }
+    var beratError by remember { mutableStateOf(false) }
 
-
+    var konversi by remember { mutableFloatStateOf(0f) }
 
     Column(
         modifier = modifier
@@ -196,12 +200,51 @@ fun ScreenContent(modifier: Modifier = Modifier) {
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(top = 10.dp)
+            )
+        Button(
+            onClick = {
+                beratError = (berat == "" || berat == "0")
+                if (beratError) return@Button
 
+                konversi = hitungKonversi(berat.toFloat(), selectedAwal.intValue, selectedAkhir.intValue)
+            },
+            modifier = Modifier.padding(top = 8.dp),
+            contentPadding = PaddingValues(horizontal = 32.dp, vertical = 8.dp)
+        ) {
+            Text(text = stringResource(R.string.button))
+        }
+        if (!beratError && konversi > 0){
+            HorizontalDivider(
+                modifier = Modifier.padding(vertical = 8.dp),
+                thickness = 1.dp
+            )
+            Text(
+                text = stringResource(R.string.hasil, konversi, stringResource(selectedAkhir.intValue)),
+                style = MaterialTheme.typography.titleLarge,
+                modifier = Modifier.padding(top = 15.dp)
             )
         }
     }
+}
 
-fun getInitial(unit: String): String{
+private fun hitungKonversi(berat:Float, satuanAwal:Int, satuanAkhir:Int): Float{
+    val konversiSatuan = mapOf(
+        R.string.kg to 1_000_000f,
+        R.string.hg to 1_00_000f,
+        R.string.dag to 1_0_000f,
+        R.string.gram to 1_000f,
+        R.string.dg to 100f,
+        R.string.cg to 10f,
+        R.string.mg to 1f,
+    )
+
+    val hitungAwal = konversiSatuan[satuanAwal] ?: 1f
+    val hitungAkhir = konversiSatuan[satuanAkhir] ?: 1f
+
+    return (berat * hitungAwal) / hitungAkhir
+}
+
+private fun getInitial(unit: String): String{
     return unit.takeLast(4)
 }
 
