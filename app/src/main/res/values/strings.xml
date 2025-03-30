@@ -15,4 +15,7 @@
     <string name="input_invalid">Cannot be empty</string>
     <string name="button">Count</string>
     <string name="hasil">%1$.2f %2$s</string>
+    <string name="tentang_aplikasi">About Screen</string>
+    <string name="copyright">The Weight Unit Conversion Application is an Android application that is made to assist users in converting from one unit of weight to another. Then this application is equipped with a share feature to help users if they want to share their conversion results\n\n This application was created for Assesment 1 Programming for Mobile Devices 1\n\nCopyright© 2024–2025 Alea Atapasya.\nAll rights reserved</string>
+
 </resources>
