@@ -41,6 +41,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.ImeAction
@@ -270,7 +271,8 @@ fun OverflowMenu(navController: NavController) {
                             Icon(
                                 painter = painterResource(R.drawable.help),
                                 modifier = Modifier.size(22.dp),
-                                contentDescription = stringResource(R.string.tutorial)
+                                contentDescription = stringResource(R.string.tutorial),
+                                tint = Color.Black
                             )
                         },
                         text = {Text(text = stringResource(R.string.tutorial))},

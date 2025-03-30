@@ -19,5 +19,6 @@
     <string name="copyright">The Weight Unit Conversion Application is an Android application that is made to assist users in converting from one unit of weight to another. Then this application is equipped with a share feature to help users if they want to share their conversion results\n\n This application was created for Assesment 1 Programming for Mobile Devices 1\n\nCopyright© 2024–2025 Alea Atapasya.\nAll rights reserved</string>
     <string name="menu_overflow">Menu Overflow</string>
     <string name="tutorial">Usage Tutorial</string>
+    <string name="kembali">Back</string>
 
 </resources>
