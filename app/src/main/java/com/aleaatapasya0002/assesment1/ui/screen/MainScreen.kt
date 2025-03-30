@@ -13,14 +13,18 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Info
+import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material.icons.filled.Warning
 import androidx.compose.material3.Button
+import androidx.compose.material3.DropdownMenu
 import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.ExposedDropdownMenuBox
 import androidx.compose.material3.ExposedDropdownMenuDefaults
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
@@ -43,12 +47,15 @@ import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
+import androidx.navigation.compose.rememberNavController
 import com.aleaatapasya0002.assesment1.R
+import com.aleaatapasya0002.assesment1.navigation.Screen
 import com.aleaatapasya0002.assesment1.ui.theme.Assesment1Theme
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun MainScreen() {
+fun MainScreen(navController: NavController) {
     Scaffold (
         topBar = {
             TopAppBar(
@@ -58,7 +65,10 @@ fun MainScreen() {
                 colors = TopAppBarDefaults.mediumTopAppBarColors(
                     containerColor = MaterialTheme.colorScheme.primaryContainer,
                     titleContentColor = MaterialTheme.colorScheme.primary,
-                )
+                ),
+                actions = {
+                    OverflowMenu(navController)
+                }
             )
         }
     ) { innerPadding ->
@@ -227,6 +237,50 @@ fun ScreenContent(modifier: Modifier = Modifier) {
     }
 }
 
+@Composable
+fun OverflowMenu(navController: NavController) {
+    var expanded by remember { mutableStateOf(false) }
+    Box(
+        modifier = Modifier
+            .padding(10.dp)
+    ){
+        IconButton(onClick = {expanded = !expanded}) {
+            Icon(
+                Icons.Default.MoreVert,
+                contentDescription = stringResource(R.string.menu_overflow))
+        }
+        DropdownMenu(
+            expanded = expanded,
+            onDismissRequest = { expanded = false}
+        ) {
+            DropdownMenuItem(
+                leadingIcon = {
+                    Icon(
+                        imageVector = Icons.Default.Info,
+                        contentDescription = stringResource(R.string.tentang_aplikasi)
+                    ) },
+                        text = {Text(text = stringResource(R.string.tentang_aplikasi))},
+                        onClick = {
+                            expanded = false
+                            navController.navigate(Screen.About.route)
+                        }
+                    )
+                    DropdownMenuItem(
+                        leadingIcon = {
+                            Icon(
+                                painter = painterResource(R.drawable.help),
+                                modifier = Modifier.size(22.dp),
+                                contentDescription = stringResource(R.string.tutorial)
+                            )
+                        },
+                        text = {Text(text = stringResource(R.string.tutorial))},
+                        onClick = {}
+                    )
+
+                }
+    }
+}
+
 private fun hitungKonversi(berat:Float, satuanAwal:Int, satuanAkhir:Int): Float{
     val konversiSatuan = mapOf(
         R.string.kg to 1_000_000f,
@@ -270,6 +324,6 @@ fun ErrorHint(isError: Boolean) {
 @Composable
 fun MainScreenPreview() {
     Assesment1Theme {
-        MainScreen()
+        MainScreen(rememberNavController())
     }
 }

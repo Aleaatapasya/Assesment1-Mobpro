@@ -18,5 +18,6 @@
     <string name="hasil">%1$.2f %2$s</string>
     <string name="tentang_aplikasi">Tentang Aplikasi</string>
     <string name="copyright">Aplikasi Konversi Satuan Berat merupakan sebuah aplikasi Android yang dibuat untuk membantu user dalam mengkonversi dari satuan berat satu ke satuan berat lainnya. Kemudian aplikasi ini dilengkapi dengan fitur bagikan untuk membantu user jika ingin membagikan hasil konversi nya.\n\n Aplikasi ini dibuat untuk Assesment 1 kelas Pemrograman untuk Perangkat Bergerak 1.\n\nCopyright© 2024–2025 Alea Atapasya.\nAll rights reserved </string>
-
+    <string name="menu_overflow">Menu Overflow</string>
+    <string name="tutorial">Tutorial Penggunaan</string>
 </resources>
