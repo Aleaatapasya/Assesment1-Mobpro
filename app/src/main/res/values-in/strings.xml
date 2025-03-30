@@ -21,4 +21,6 @@
     <string name="menu_overflow">Menu Overflow</string>
     <string name="tutorial">Tutorial Penggunaan</string>
     <string name="kembali">Kembali</string>
+    <string name="deskripsi">Berikut tata cara penggunaan aplikasi konversi berat, diantaranya:\n\n1.Pilih satuan awal\n dengan cara mengklik menu dropdown dan pilih satuan beratnya.\n\n2.Pilih satuan akhir\n dengan cara mengklik menu dropdown dan pilih satuan beratnya.\n\n3. Masukkan nilai berat\n dengan cara ketuk kolom input dan masukkan angka berat yang ingin di konversi.\n\n4.Klik tombol hitung\n klik tombol hitung untuk melihat hasil konversi.\n\n5. Lihat dan Bagikan hasil\nLalu anda dapat melihat hasilnya dan dapat membagikan hasilnya menggunakan tombol share</string>
+
 </resources>

@@ -276,7 +276,10 @@ fun OverflowMenu(navController: NavController) {
                             )
                         },
                         text = {Text(text = stringResource(R.string.tutorial))},
-                        onClick = {}
+                        onClick = {
+                            expanded = false
+                            navController.navigate(Screen.Tutorial.route)
+                        }
                     )
 
                 }
