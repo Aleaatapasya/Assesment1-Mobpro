@@ -16,10 +16,12 @@
     <string name="button">Count</string>
     <string name="hasil">%1$.2f %2$s</string>
     <string name="tentang_aplikasi">About Screen</string>
-    <string name="copyright">The Weight Unit Conversion Application is an Android application that is made to assist users in converting from one unit of weight to another. Then this application is equipped with a share feature to help users if they want to share their conversion results\n\n This application was created for Assesment 1 Programming for Mobile Devices 1\n\nCopyright© 2024–2025 Alea Atapasya.\nAll rights reserved</string>
+    <string name="copyright">The Weight Unit Conversion Application is an Android application that is made to assist users in converting from one unit of weight to another. Then this application is equipped with a share feature to help users if they want to share their conversion results\n\n This application was created for Assesment 1 Programming for Mobile Devices 1\n\nCopyright© 2025–2026 Alea Atapasya.\nAll rights reserved</string>
     <string name="menu_overflow">Menu Overflow</string>
     <string name="tutorial">Usage Tutorial</string>
     <string name="kembali">Back</string>
     <string name="deskripsi">Berikut tata cara penggunaan aplikasi konversi berat, diantaranya:\n\n1.Pilih satuan awal\n dengan cara mengklik menu dropdown dan pilih satuan beratnya.\n2.Pilih satuan akhir\n dengan cara mengklik menu dropdown dan pilih satuan beratnya.\n3. Masukkan nilai berat\n dengan cara ketuk kolom input dan masukkan angka berat yang ingin di konversi.\n4.Klik tombol hitung\n klik tombol hitung untuk melihat hasil konversi.\n5. Lihat dan Bagikan hasil\nLalu anda dapat melihat hasilnya dan dapat membagikan hasilnya menggunakan tombol share</string>
+    <string name="bagikan">Share</string>
+    <string name="bagikan_template">Initial Unit: %s\nConverted To: %s\n\n Hasil Konversi: %.2f</string>
 
 </resources>

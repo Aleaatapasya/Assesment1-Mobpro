@@ -1,5 +1,7 @@
 package com.aleaatapasya0002.assesment1.ui.screen
 
+import android.content.Context
+import android.content.Intent
 import android.content.res.Configuration
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
@@ -42,6 +44,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.ImeAction
@@ -95,6 +98,8 @@ fun ScreenContent(modifier: Modifier = Modifier) {
     var beratError by remember { mutableStateOf(false) }
 
     var konversi by remember { mutableFloatStateOf(0f) }
+
+    val context = LocalContext.current
 
     Column(
         modifier = modifier
@@ -234,6 +239,22 @@ fun ScreenContent(modifier: Modifier = Modifier) {
                 style = MaterialTheme.typography.titleLarge,
                 modifier = Modifier.padding(top = 15.dp)
             )
+            Button(
+                onClick = {
+                    shareData(
+                        context = context,
+                        message = context.getString(
+                            R.string.bagikan_template,
+                            context.getString(selectedAwal.intValue),
+                            context.getString(selectedAkhir.intValue),
+                            konversi)
+                    )
+                },
+                modifier = Modifier.padding(top = 8.dp),
+                contentPadding = PaddingValues(horizontal = 32.dp, vertical = 16.dp)
+            ) {
+                Text(text = stringResource(R.string.bagikan))
+            }
         }
     }
 }
@@ -289,8 +310,8 @@ fun OverflowMenu(navController: NavController) {
 private fun hitungKonversi(berat:Float, satuanAwal:Int, satuanAkhir:Int): Float{
     val konversiSatuan = mapOf(
         R.string.kg to 1_000_000f,
-        R.string.hg to 1_00_000f,
-        R.string.dag to 1_0_000f,
+        R.string.hg to 100_000f,
+        R.string.dag to 10_000f,
         R.string.gram to 1_000f,
         R.string.dg to 100f,
         R.string.cg to 10f,
@@ -321,6 +342,16 @@ fun IconPicker(isError: Boolean, unit: String) {
 fun ErrorHint(isError: Boolean) {
     if (isError){
         Text(text = stringResource(R.string.input_invalid))
+    }
+}
+
+private fun shareData(context: Context, message: String){
+    val shareIntent = Intent(Intent.ACTION_SEND).apply {
+        type = "text/plain"
+        putExtra(Intent.EXTRA_TEXT, message)
+    }
+    if (shareIntent.resolveActivity(context.packageManager) != null){
+        context.startActivity(shareIntent)
     }
 }
 
