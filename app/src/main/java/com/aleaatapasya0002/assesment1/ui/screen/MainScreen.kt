@@ -97,6 +97,7 @@ fun ScreenContent(modifier: Modifier = Modifier) {
     var berat by remember { mutableStateOf("") }
     var beratError by remember { mutableStateOf(false) }
 
+    var satuanAkhirTerpilih by remember { mutableIntStateOf(selectedAkhir.intValue) }
     var konversi by remember { mutableFloatStateOf(0f) }
 
     val context = LocalContext.current
@@ -223,6 +224,7 @@ fun ScreenContent(modifier: Modifier = Modifier) {
                 if (beratError) return@Button
 
                 konversi = hitungKonversi(berat.toFloat(), selectedAwal.intValue, selectedAkhir.intValue)
+                satuanAkhirTerpilih = selectedAkhir.intValue
             },
             modifier = Modifier.padding(top = 8.dp),
             contentPadding = PaddingValues(horizontal = 32.dp, vertical = 8.dp)
@@ -235,7 +237,7 @@ fun ScreenContent(modifier: Modifier = Modifier) {
                 thickness = 1.dp
             )
             Text(
-                text = stringResource(R.string.hasil, konversi, stringResource(selectedAkhir.intValue)),
+                text = stringResource(R.string.hasil, konversi, stringResource(satuanAkhirTerpilih)),
                 style = MaterialTheme.typography.titleLarge,
                 modifier = Modifier.padding(top = 15.dp)
             )
@@ -301,9 +303,9 @@ fun OverflowMenu(navController: NavController) {
                             expanded = false
                             navController.navigate(Screen.Tutorial.route)
                         }
-                    )
+                     )
 
-                }
+        }
     }
 }
 
