@@ -2,13 +2,13 @@
     <string name="app_name">Assesment1</string>
     <string name="intro">Need to convert weight easily??? From Kilograms, Hektograms, Decagrams, Grams, Desigrams, Centigrams, dan Miligrams. Try it now!!!</string>
     <string name="gambar">This is a picture of a scale </string>
-    <string name="kg">Kilogram(Kg)</string>
-    <string name="hg">Hektogram(Hg)</string>
-    <string name="dag">Decagram(Dag)</string>
+    <string name="kg">Kilograms(Kg)</string>
+    <string name="hg">Hektograms(Hg)</string>
+    <string name="dag">Decagrams(Dag)</string>
     <string name="gram">Gram(Gr)</string>
-    <string name="dg">Desigram(Dg)</string>
-    <string name="cg">Centigram(Cg)</string>
-    <string name="mg">Milligram(Mg)</string>
+    <string name="dg">Desigrams(Dg)</string>
+    <string name="cg">Centigrams(Cg)</string>
+    <string name="mg">Milligrams(Mg)</string>
     <string name="satuan_awal">Choose initial unit</string>
     <string name="satuan_akhir">Choose final unit</string>
     <string name="input">Enter the Weight</string>
@@ -16,11 +16,11 @@
     <string name="button">Calculate</string>
     <string name="hasil">%1$s %2$s</string>
     <string name="tentang_aplikasi">About Screen</string>
-    <string name="copyright">The Weight Unit Conversion Application is an Android application that is made to assist users in converting from one unit of weight to another. Then this application is equipped with a share feature to help users if they want to share their conversion results\n\n This application was created for Assesment 1 Programming for Mobile Devices 1\n\nCopyright© 2025–2026 Alea Atapasya.\nAll rights reserved</string>
+    <string name="copyright">The Weight Unit Conversion Application is an Android application that is made to assist users in converting from one unit of weight to another. Then this application is equipped with a share feature to help users if they want to share their conversion results\n\nThis application was created for Assesment 1 Programming for Mobile Devices 1\n\nCopyright© 2025–2026 Alea Atapasya.\nAll rights reserved</string>
     <string name="menu_overflow">Menu Overflow</string>
     <string name="tutorial">Usage Tutorial</string>
     <string name="kembali">Back</string>
-    <string name="deskripsi">Here are the procedures for using the weight conversion application, including:\n\n1.Choose the initial unit\nBy clicking the dropdown menu and choose the weight unit\n2.Choose the final unit\nBy clicking the dropdown menu and choose the weight unit\n3. Enter the weight unit\nBy tapping the input column and entering the weight number you want to convert.\n4.Click the calculate button\nClick the calculate button to see the conversion results\n5. View and share the results\nThen you can see the results and can share the results using the share button</string>
+    <string name="deskripsi">Here are the procedures for using the weight conversion application, including:\n\n1.Choose the initial unit\nBy clicking the dropdown menu and choose the weight unit\n\n2.Choose the final unit\nBy clicking the dropdown menu and choose the weight unit\n\n3. Enter the weight unit\nBy tapping the input column and entering the weight number you want to convert.\n\n4.Click the calculate button\nClick the calculate button to see the conversion results\n\n5. View and share the results\nThen you can see the results and can share the results using the share button</string>
     <string name="bagikan">Share</string>
     <string name="bagikan_template">Initial Unit: %1$s\nConverted To: %2$s\n\nValue before conversiom: %3$s %1$s Results after conversion: %4$s %2$s</string>
 

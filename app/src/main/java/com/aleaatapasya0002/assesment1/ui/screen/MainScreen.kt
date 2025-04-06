@@ -13,6 +13,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Info
@@ -43,14 +44,15 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.aleaatapasya0002.assesment1.R
@@ -128,7 +130,7 @@ fun ScreenContent(modifier: Modifier = Modifier) {
             Box(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(end = 3.dp)
+                    .padding(end = 1.dp)
                     .weight(1f)
             ) {
                 ExposedDropdownMenuBox(
@@ -145,7 +147,11 @@ fun ScreenContent(modifier: Modifier = Modifier) {
                         trailingIcon = {
                             ExposedDropdownMenuDefaults.TrailingIcon(expanded = expandedAwal.value)
                         },
-                        modifier = Modifier.menuAnchor()
+                        textStyle = TextStyle(fontSize = 15.sp),
+                        singleLine = true,
+                        modifier = Modifier
+                            .menuAnchor()
+                            .width(180.dp)
                     )
                     ExposedDropdownMenu(
                         expanded = expandedAwal.value,
@@ -166,7 +172,7 @@ fun ScreenContent(modifier: Modifier = Modifier) {
             Box(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(end = 3.dp)
+                    .padding(end = 1.dp)
                     .weight(1f)
             ) {
                 ExposedDropdownMenuBox(
@@ -183,7 +189,11 @@ fun ScreenContent(modifier: Modifier = Modifier) {
                         trailingIcon = {
                             ExposedDropdownMenuDefaults.TrailingIcon(expanded = expandedAkhir.value)
                         },
-                        modifier = Modifier.menuAnchor()
+                        textStyle = TextStyle(fontSize = 15.sp),
+                        singleLine = true,
+                        modifier = Modifier
+                            .menuAnchor()
+                            .width(180.dp)
                     )
                     ExposedDropdownMenu(
                         expanded = expandedAkhir.value,
@@ -291,7 +301,8 @@ fun OverflowMenu(navController: NavController) {
                 leadingIcon = {
                     Icon(
                         imageVector = Icons.Default.Info,
-                        contentDescription = stringResource(R.string.tentang_aplikasi)
+                        contentDescription = stringResource(R.string.tentang_aplikasi),
+                        tint = MaterialTheme.colorScheme.primary
                     ) },
                         text = {Text(text = stringResource(R.string.tentang_aplikasi))},
                         onClick = {
@@ -305,7 +316,7 @@ fun OverflowMenu(navController: NavController) {
                                 painter = painterResource(R.drawable.help),
                                 modifier = Modifier.size(22.dp),
                                 contentDescription = stringResource(R.string.tutorial),
-                                tint = Color.Black
+                                tint = MaterialTheme.colorScheme.primary
                             )
                         },
                         text = {Text(text = stringResource(R.string.tutorial))},
