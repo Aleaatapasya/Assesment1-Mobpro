@@ -13,15 +13,15 @@
     <string name="satuan_akhir">Choose final unit</string>
     <string name="input">Enter the Weight</string>
     <string name="input_invalid">Cannot be empty</string>
-    <string name="button">Count</string>
-    <string name="hasil">%1$.6f %2$s</string>
+    <string name="button">Calculate</string>
+    <string name="hasil">%1$s %2$s</string>
     <string name="tentang_aplikasi">About Screen</string>
     <string name="copyright">The Weight Unit Conversion Application is an Android application that is made to assist users in converting from one unit of weight to another. Then this application is equipped with a share feature to help users if they want to share their conversion results\n\n This application was created for Assesment 1 Programming for Mobile Devices 1\n\nCopyright© 2025–2026 Alea Atapasya.\nAll rights reserved</string>
     <string name="menu_overflow">Menu Overflow</string>
     <string name="tutorial">Usage Tutorial</string>
     <string name="kembali">Back</string>
-    <string name="deskripsi">Berikut tata cara penggunaan aplikasi konversi berat, diantaranya:\n\n1.Pilih satuan awal\n dengan cara mengklik menu dropdown dan pilih satuan beratnya.\n2.Pilih satuan akhir\n dengan cara mengklik menu dropdown dan pilih satuan beratnya.\n3. Masukkan nilai berat\n dengan cara ketuk kolom input dan masukkan angka berat yang ingin di konversi.\n4.Klik tombol hitung\n klik tombol hitung untuk melihat hasil konversi.\n5. Lihat dan Bagikan hasil\nLalu anda dapat melihat hasilnya dan dapat membagikan hasilnya menggunakan tombol share</string>
+    <string name="deskripsi">Here are the procedures for using the weight conversion application, including:\n\n1.Choose the initial unit\nBy clicking the dropdown menu and choose the weight unit\n2.Choose the final unit\nBy clicking the dropdown menu and choose the weight unit\n3. Enter the weight unit\nBy tapping the input column and entering the weight number you want to convert.\n4.Click the calculate button\nClick the calculate button to see the conversion results\n5. View and share the results\nThen you can see the results and can share the results using the share button</string>
     <string name="bagikan">Share</string>
-    <string name="bagikan_template">Initial Unit: %s\nConverted To: %s\n\n Hasil Konversi: %.6f</string>
+    <string name="bagikan_template">Initial Unit: %1$s\nConverted To: %2$s\n\nValue before conversiom: %3$s %1$s Results after conversion: %4$s %2$s</string>
 
 </resources>

@@ -236,8 +236,16 @@ fun ScreenContent(modifier: Modifier = Modifier) {
                 modifier = Modifier.padding(vertical = 8.dp),
                 thickness = 1.dp
             )
+            val hasilFormat =
+                if (konversi < 0.01f){
+                    "%.6f".format(konversi)
+            }
+                else {
+                "%.2f".format(konversi)
+                }
+
             Text(
-                text = stringResource(R.string.hasil, konversi, stringResource(satuanAkhirTerpilih)),
+                text = stringResource(R.string.hasil, hasilFormat, stringResource(satuanAkhirTerpilih)),
                 style = MaterialTheme.typography.titleLarge,
                 modifier = Modifier.padding(top = 15.dp)
             )
@@ -249,7 +257,9 @@ fun ScreenContent(modifier: Modifier = Modifier) {
                             R.string.bagikan_template,
                             context.getString(selectedAwal.intValue),
                             context.getString(selectedAkhir.intValue),
-                            konversi)
+                            berat,
+                            hasilFormat
+                        )
                     )
                 },
                 modifier = Modifier.padding(top = 8.dp),

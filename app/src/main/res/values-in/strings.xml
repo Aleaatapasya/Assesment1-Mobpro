@@ -15,15 +15,15 @@
     <string name="input">Masukkan Berat</string>
     <string name="input_invalid">Tidak boleh kosong</string>
     <string name="button">Hitung</string>
-    <string name="hasil">%1$.6f %2$s</string>
+    <string name="hasil">%1$s %2$s</string>
     <string name="tentang_aplikasi">Tentang Aplikasi</string>
     <string name="copyright">Aplikasi Konversi Satuan Berat merupakan sebuah aplikasi Android yang dibuat untuk membantu user dalam mengkonversi dari satuan berat satu ke satuan berat lainnya. Kemudian aplikasi ini dilengkapi dengan fitur bagikan untuk membantu user jika ingin membagikan hasil konversi nya.\n\n Aplikasi ini dibuat untuk Assesment 1 kelas Pemrograman untuk Perangkat Bergerak 1.\n\nCopyright© 2025 – 2026 Alea Atapasya.\nAll rights reserved </string>
     <string name="menu_overflow">Menu Overflow</string>
     <string name="tutorial">Tutorial Penggunaan</string>
     <string name="kembali">Kembali</string>
-    <string name="deskripsi">Berikut tata cara penggunaan aplikasi konversi berat, diantaranya:\n\n1.Pilih satuan awal\n dengan cara mengklik menu dropdown dan pilih satuan beratnya.\n\n2.Pilih satuan akhir\n dengan cara mengklik menu dropdown dan pilih satuan beratnya.\n\n3. Masukkan nilai berat\n dengan cara ketuk kolom input dan masukkan angka berat yang ingin di konversi.\n\n4.Klik tombol hitung\n klik tombol hitung untuk melihat hasil konversi.\n\n5. Lihat dan Bagikan hasil\nLalu anda dapat melihat hasilnya dan dapat membagikan hasilnya menggunakan tombol share</string>
+    <string name="deskripsi">Berikut tata cara penggunaan aplikasi konversi berat, diantaranya:\n\n1.Pilih satuan awal\n dengan cara mengklik menu dropdown dan pilih satuan beratnya.\n\n2.Pilih satuan akhir\n dengan cara mengklik menu dropdown dan pilih satuan beratnya.\n\n3. Masukkan nilai berat\n dengan cara ketuk kolom input dan masukkan angka berat yang ingin di konversi.\n\n4.Klik tombol hitung\n klik tombol hitung untuk melihat hasil konversi.\n\n5. Lihat dan Bagikan hasil\nLalu anda dapat melihat hasilnya dan dapat membagikan hasilnya menggunakan tombol bagikan</string>
     <string name="bagikan">Bagikan</string>
-    <string name="bagikan_template">Satuan Awal: %s\nDikonversi ke: %s\n\n Hasil Konversi: %.6f</string>
+    <string name="bagikan_template">Satuan Awal: %1$s\nDikonversi ke: %2$s\n\nNilai sebelum konversi: %3$s %1$s Hasil sesudah konversi: %4$s %2$s</string>
 
 
 </resources>
